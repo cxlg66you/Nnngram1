@@ -101,6 +101,7 @@ public class Defines {
     public static final String keepOnlineStatusAs = "keepOnlineStatusAs";
 
     // Nnngram
+    public static final String doNotUnarchiveBySwipe = "doNotUnarchiveBySwipe";
 
     // Custom API
     public static final String customAPI = "customAPI";
