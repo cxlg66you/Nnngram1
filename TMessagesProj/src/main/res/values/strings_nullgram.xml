@@ -294,10 +294,23 @@
     <string name="pangu" translatable="false">Pangu</string>
     <string name="enablePanguOnReceiving">Enable Pangu on receiving</string>
     <string name="enablePanguOnSending">Enable Pangu on sending</string>
-  <string name="panguInfo">Paranoid text spacing for good readability, to automatically insert whitespace between CJK (Chinese, Japanese, Korean), half-width English, digit and symbol characters.</string>
+    <string name="panguInfo">Paranoid text spacing for good readability, to automatically insert whitespace between CJK (Chinese, Japanese, Korean), half-width English, digit and symbol characters.</string>
     <string name="showExactTime">Display time in seconds</string>
-  <string name="keepOnlineStatusAs">Keep online status as</string>
+    <string name="keepOnlineStatusAs">Keep online status as</string>
     <string name="Offline">Offline</string>
     <string name="Special">Special</string>
-  <string name="BotLoginMessage">Enter the bot token obtained from **@BotFather**.</string>
+    <string name="BotLoginMessage">Enter the bot token obtained from **@BotFather**.</string>
+
+    <string name="AppIconGoogle">Google</string>
+    <string name="AppIconColorful">Colorful</string>
+    <string name="AppIconDarkGreen">Dark Green</string>
+    <string name="AppIconNeon">Neon</string>
+    <string name="doNotUnarchiveBySwipe">Do not unarchive by swipe</string>
+    <string name="hideInputFieldBotButton">Hide input field bot button</string>
+    <string name="hideMessageSeenTooltip">Hide message seen tooltip</string>
+    <string name="disableNotificationBubble">Disable notification bubble</string>
+    <string name="showOnlineStatus">Show online status</string>
+    <string name="disablePhotoSideAction">Disable photo side action</string>
+    <string name="MergeMessage">Merge message</string>
+    <string name="filterZalgo">Filter \"Zalgo\" symbols</string>
 </resources>

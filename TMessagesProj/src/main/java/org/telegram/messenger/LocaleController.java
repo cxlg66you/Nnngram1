@@ -44,8 +44,8 @@ import java.util.HashSet;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import top.qwq2333.nullgram.config.ConfigManager;
-import top.qwq2333.nullgram.utils.Defines;
+import xyz.nextalone.nnngram.config.ConfigManager;
+import xyz.nextalone.nnngram.utils.Defines;
 
 public class LocaleController {
 
@@ -1146,9 +1146,11 @@ public class LocaleController {
         }
 
         if (value.contains("Telegram"))
-            value = value.replace("Telegram", "Nullgram");
+            value = value.replace("Telegram", "Nnngram");
         if (value.contains("TELEOFFICIAL"))
             value = value.replace("TELEOFFICIAL", "Telegram");
+        if (value.contains("Nullgram"))
+            value = value.replace("Nullgram", "Nnngram");
         return value;
     }
 
