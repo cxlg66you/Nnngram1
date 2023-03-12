@@ -108,6 +108,7 @@ public class Defines {
     public static final String showOnlineStatus = "showOnlineStatus";
     public static final String disablePhotoSideAction = "disablePhotoSideAction";
     public static final String mergeMessage = "mergeMessage";
+    public static final String filterZalgo = "filterZalgo";
 
     // Custom API
     public static final String customAPI = "customAPI";
