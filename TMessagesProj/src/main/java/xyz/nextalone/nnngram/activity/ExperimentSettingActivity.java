@@ -77,6 +77,7 @@ public class ExperimentSettingActivity extends BaseActivity {
     private int hidePremiumStickerAnimRow;
     private int fastSpeedUploadRow;
     private int modifyDownloadSpeedRow;
+    private int ignoreChatStrictRow;
     private int premium2Row;
     private int alwaysSendWithoutSoundRow;
 
@@ -213,6 +214,11 @@ public class ExperimentSettingActivity extends BaseActivity {
             if (view instanceof TextCheckCell) {
                 ((TextCheckCell) view).setChecked(ConfigManager.getBooleanOrFalse(Defines.enablePanguOnReceiving));
             }
+        } else if (position == ignoreChatStrictRow) {
+            ConfigManager.toggleBoolean(Defines.ignoreChatStrict);
+            if (view instanceof TextCheckCell) {
+                ((TextCheckCell) view).setChecked(ConfigManager.getBooleanOrFalse(Defines.ignoreChatStrict));
+            }
         }
 
     }
@@ -270,6 +276,7 @@ public class ExperimentSettingActivity extends BaseActivity {
             fastSpeedUploadRow = addRow("fastSpeedUpload");
             modifyDownloadSpeedRow = addRow("modifyDownloadSpeed");
             premium2Row = addRow();
+            ignoreChatStrictRow = addRow("ignoreChatStrict");
         }
 
         if (listAdapter != null) {
@@ -388,10 +395,11 @@ public class ExperimentSettingActivity extends BaseActivity {
                     } else if (position == showRPCErrorRow) {
                         textCell.setTextAndCheck(LocaleController.getString("showRPCError", R.string.showRPCError), ConfigManager.getBooleanOrFalse(Defines.showRPCError), true);
                     } else if (position == enablePanguOnSendingRow) {
-                        textCell.setTextAndCheck(LocaleController.getString("enablePanguOnSending", R.string.enablePanguOnSending), ConfigManager.getBooleanOrFalse(Defines.enablePanguOnSending),
-                            true);
+                        textCell.setTextAndCheck(LocaleController.getString("enablePanguOnSending", R.string.enablePanguOnSending), ConfigManager.getBooleanOrFalse(Defines.enablePanguOnSending), true);
                     } else if (position == enablePanguOnReceivingRow) {
                         textCell.setTextAndCheck(LocaleController.getString("enablePanguOnReceiving", R.string.enablePanguOnReceiving), ConfigManager.getBooleanOrFalse(Defines.enablePanguOnReceiving), true);
+                    } else if (position == ignoreChatStrictRow) {
+                        textCell.setTextAndCheck("", ConfigManager.getBooleanOrFalse(Defines.ignoreChatStrict), true);
                     }
                     break;
                 }
