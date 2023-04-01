@@ -129,6 +129,7 @@ public class Defines {
     public static final String showSaveMessages = "showSaveMessages";
     public static final String showViewHistory = "showViewHistory";
     public static final String showRepeat = "showRepeat";
+    public static final String showRepeatAsCopy = "showRepeatAsCopy";
     public static final String showCopyPhoto = "showCopyPhoto";
     public static final String showReactions = "showReaction";
     public static final String showReport = "showReport";
@@ -142,6 +143,8 @@ public class Defines {
     public static final int doubleTabRepeat = 4;
     public static final int doubleTabEdit = 5;
     public static final int doubleTabTranslate = 6;
+    public static final int doubleTabRepeatAsCopy = 7;
+
 
     // Auto Update
     public static final String ignoredUpdateTag = "skipUpdate";
