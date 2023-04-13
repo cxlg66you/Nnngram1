@@ -72,6 +72,7 @@ public class GeneralSettingActivity extends BaseActivity {
     private int avatarBackgroundDarkenRow;
     private int largeAvatarAsBackgroundRow;
     private int hidePhoneRow;
+    private int hideProfilePhoneRow;
     private int drawer2Row;
 
     private int translatorRow;
@@ -129,6 +130,14 @@ public class GeneralSettingActivity extends BaseActivity {
             ConfigManager.toggleBoolean(Defines.hidePhone);
             if (view instanceof TextCheckCell) {
                 ((TextCheckCell) view).setChecked(ConfigManager.getBooleanOrFalse(Defines.hidePhone));
+            }
+            parentLayout.rebuildAllFragmentViews(false, false);
+            getNotificationCenter().postNotificationName(NotificationCenter.mainUserInfoChanged);
+            listAdapter.notifyItemChanged(drawerRow, PARTIAL);
+        } else if (position == hideProfilePhoneRow) {
+            ConfigManager.toggleBoolean(Defines.hideProfilePhone);
+            if (view instanceof TextCheckCell) {
+                ((TextCheckCell) view).setChecked(ConfigManager.getBooleanOrFalse(Defines.hideProfilePhone));
             }
             parentLayout.rebuildAllFragmentViews(false, false);
             getNotificationCenter().postNotificationName(NotificationCenter.mainUserInfoChanged);
@@ -371,6 +380,7 @@ public class GeneralSettingActivity extends BaseActivity {
             largeAvatarAsBackgroundRow = -1;
         }
         hidePhoneRow = addRow("hidePhone");
+        hideProfilePhoneRow = addRow("hideProfilePhone");
         drawer2Row = addRow();
 
         translatorRow = addRow();
@@ -560,6 +570,8 @@ public class GeneralSettingActivity extends BaseActivity {
                         textCell.setTextAndCheck(LocaleController.getString("showBotAPIID", R.string.showBotAPIID), ConfigManager.getBooleanOrFalse(Defines.showBotAPIID), true);
                     } else if (position == hidePhoneRow) {
                         textCell.setTextAndCheck(LocaleController.getString("hidePhone", R.string.hidePhone), ConfigManager.getBooleanOrFalse(Defines.hidePhone), true);
+                    } else if (position == hideProfilePhoneRow) {
+                        textCell.setTextAndCheck(LocaleController.getString("hideProfilePhone", R.string.hideProfilePhone), ConfigManager.getBooleanOrFalse(Defines.hideProfilePhone), true);
                     } else if (position == showExactNumberRow) {
                         textCell.setTextAndCheck(LocaleController.getString("showExactNumber", R.string.showExactNumber), ConfigManager.getBooleanOrFalse(Defines.showExactNumber), true);
                     } else if (position == showExactTimeRow) {

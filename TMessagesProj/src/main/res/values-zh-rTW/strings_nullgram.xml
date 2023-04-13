@@ -88,6 +88,7 @@
     <string name="PrivacyNoticePhoneVisible">偵測到您的手機號碼對任何人可見，這可能會讓受政府控制的駭客找到您的真實身份，請關閉它！</string>
     <string name="PrivacyNoticeAddByPhone">偵測到您尚未關閉「透過手機號碼找到我」的設定，這可能會讓政府控制的駭客找到您的真實身份，請關閉它！</string>
     <string name="hidePhone">隱藏電話號碼</string>
+    <string name="hideProfilePhone">在帳戶界面隱藏手機號碼</string>
     <string name="AppLinkNotVerifiedMessage">在 Android 12 及更新版本中，您需要手動添加驗證過的連結，以便在 Nullgram 中打開 t.me 連結</string>
     <string name="AppLinkNotVerifiedTitle">應用程式連結尚未驗證</string>
     <string name="showExactNumber">顯示確切數字</string>
