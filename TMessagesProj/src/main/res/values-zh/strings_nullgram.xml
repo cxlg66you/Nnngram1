@@ -298,7 +298,7 @@
     <string name="Offline">离线</string>
     <string name="Special">特殊</string>
     <string name="BotLoginMessage">输入从 **@BotFather** 获取的机器人令牌。</string>
-    
+
     <string name="AppIconColorful">缤纷</string>
     <string name="AppIconDarkGreen">深翠</string>
     <string name="AppIconNeon">霓虹</string>
