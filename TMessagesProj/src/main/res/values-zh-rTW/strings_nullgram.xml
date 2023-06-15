@@ -315,4 +315,5 @@
     <string name="ignoreFolderUnreadCount">忽略資料夾標籤上的未讀計數</string>
     <string name="customTitle">自定义标题</string>
     <string name="setCustomTitle">设置自定义标题</string>
+    <string name="deleteMessageForBoth">為雙方刪除訊息</string>
 </resources>

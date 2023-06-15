@@ -121,6 +121,7 @@ public class ChatSettingActivity extends BaseActivity {
     private int disablePhotoSideActionRow;
     private int mergeMessageRow;
     private int filterZalgoRow;
+    private int deleteMessageForBothRow;
     private int chat2Row;
 
     private int markdownRow;
@@ -407,6 +408,11 @@ public class ChatSettingActivity extends BaseActivity {
             if (view instanceof TextCheckCell) {
                 ((TextCheckCell) view).setChecked(ConfigManager.getBooleanOrFalse(Defines.filterZalgo));
             }
+        } else if (position == deleteMessageForBothRow) {
+            ConfigManager.toggleBoolean(Defines.deleteMessageForBoth);
+            if (view instanceof TextCheckCell) {
+                ((TextCheckCell) view).setChecked(ConfigManager.getBooleanOrFalse(Defines.deleteMessageForBoth));
+            }
         }
     }
 
@@ -465,6 +471,7 @@ public class ChatSettingActivity extends BaseActivity {
         disablePhotoSideActionRow = addRow("disablePhotoSideAction");
         mergeMessageRow = addRow("mergeMessage");
         filterZalgoRow = addRow("filterZalgo");
+        deleteMessageForBothRow = addRow("deleteMessageForBoth");
         chat2Row = addRow();
         markdownRow = addRow();
         markdownDisableRow = addRow("markdownDisabled");
@@ -628,6 +635,9 @@ public class ChatSettingActivity extends BaseActivity {
                     } else if (position == filterZalgoRow) {
                         textCell.setTextAndCheck(LocaleController.getString("filterZalgo", R.string.filterZalgo),
                             ConfigManager.getBooleanOrFalse(Defines.filterZalgo), true);
+                    } else if (position == deleteMessageForBothRow) {
+                        textCell.setTextAndCheck(LocaleController.getString("deleteMessageForBoth", R.string.deleteMessageForBoth),
+                            ConfigManager.getBooleanOrFalse(Defines.deleteMessageForBoth), true);
                     }
                     break;
                 }
