@@ -320,4 +320,5 @@
     <string name="customTitle">Custom title</string>
     <string name="setCustomTitle">Set custom title</string>
     <string name="deleteMessageForBoth">Delete message for both</string>
+    <string name="drawerList">Drawer list</string>
 </resources>

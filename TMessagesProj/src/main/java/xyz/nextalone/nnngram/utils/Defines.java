@@ -115,6 +115,15 @@ public class Defines {
     public static final String customTitle = "customTitle";
     public static final String deleteMessageForBoth = "deleteMessageForBoth";
 
+    // Drawer List
+    public static final String showNewGroup = "showNewGroup";
+    public static final String showContacts = "showContacts";
+    public static final String showCalls = "showCalls";
+    public static final String showPeopleNearby = "showPeopleNearby";
+    public static final String showSavedMessages = "showSavedMessages";
+    public static final String showChangeEmojiStatus = "showChangeEmojiStatus";
+    public static final String showProfileMyStories = "showProfileMyStories";
+
     // Custom API
     public static final String customAPI = "customAPI";
     public static final String customAppId = "customAppId";
