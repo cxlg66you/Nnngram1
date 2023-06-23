@@ -18,7 +18,7 @@ object WordUtils {
 
     init {
         nounMap.putAll(generateBimap(nounMap))
-        verbMap.putAll(generateBimap(verbMap))
+//        verbMap.putAll(generateBimap(verbMap))
     }
 
     fun replaceAntonyms(string: String?): String {
@@ -28,15 +28,15 @@ object WordUtils {
         nounMap.onEachIndexed { index, entry ->
             result = result?.split(entry.key)?.joinToString("_noun_$index")
         }
-        verbMap.onEachIndexed { index, entry ->
-            result = result?.split(entry.key)?.joinToString("_verb_$index")
-        }
+//        verbMap.onEachIndexed { index, entry ->
+//            result = result?.split(entry.key)?.joinToString("_verb_$index")
+//        }
         nounMap.onEachIndexed { index, entry ->
             result = result?.split("_noun_$index")?.joinToString(entry.value)
         }
-        verbMap.onEachIndexed { index, entry ->
-            result = result?.split("_verb_$index")?.joinToString(entry.value)
-        }
+//        verbMap.onEachIndexed { index, entry ->
+//            result = result?.split("_verb_$index")?.joinToString(entry.value)
+//        }
 
         return result.toString()
     }
