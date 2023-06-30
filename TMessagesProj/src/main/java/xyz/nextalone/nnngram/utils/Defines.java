@@ -114,6 +114,7 @@ public class Defines {
     public static final String ignoreChatStrict = "ignoreChatStrict";
     public static final String customTitle = "customTitle";
     public static final String deleteMessageForBoth = "deleteMessageForBoth";
+    public static final String textStyleSettings = "textStyleSettings";
 
     // Drawer List
     public static final String showNewGroup = "showNewGroup";
@@ -146,6 +147,18 @@ public class Defines {
     public static final String showCopyPhoto = "showCopyPhoto";
     public static final String showReactions = "showReaction";
     public static final String showReport = "showReport";
+
+    // Text Style
+    public static final String showTextSpoiler = "showTextSpoiler";
+    public static final String showTextBold = "showTextBold";
+    public static final String showTextItalic = "showTextItalic";
+    public static final String showTextMono = "showTextMono";
+    public static final String showTextStrike = "showTextStrike";
+    public static final String showTextUnderline = "showTextUnderline";
+    public static final String showTextCreateMention = "showTextCreateMention";
+    public static final String showTextCreateLink = "showTextCreateLink";
+    public static final String showTextRegular = "showTextRegular";
+
 
     // custom double tap
     public static final String doubleTab = "doubleTab";
