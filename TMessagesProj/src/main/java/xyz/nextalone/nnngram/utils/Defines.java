@@ -85,6 +85,7 @@ public class Defines {
     public static final String modifyDownloadSpeed = "modifyDownloadSpeed";
     public static final String disablePreviewVideoSoundShortcut = "disablePreviewVideoSoundShortcut";
     public static final String quickToggleAnonymous = "quickToggleAnonymous";
+    public static final String hideSendAsButton = "hideSendAsButton";
     public static final String hideProxySponsorChannel = "hideProxySponsorChannel";
     public static final String hideAllTab = "hideAllTab";
     public static final String ignoreMutedCount = "ignoreMutedCount";

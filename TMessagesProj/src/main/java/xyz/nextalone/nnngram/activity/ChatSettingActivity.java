@@ -106,6 +106,7 @@ public class ChatSettingActivity extends BaseActivity {
     private int disableTrendingStickerRow;
     private int disablePreviewVideoSoundShortcutRow;
     private int quickToggleAnonymous;
+    private int hideSendAsButtonRow;
     private int customDoubleClickTapRow;
     private int confirmToSendMediaMessagesRow;
     private int maxRecentStickerRow;
@@ -346,6 +347,11 @@ public class ChatSettingActivity extends BaseActivity {
                 ProcessPhoenix.triggerRebirth(getContext(), new Intent(getContext(), LaunchActivity.class));
             });
             restart.show();
+        } else if (position == hideSendAsButtonRow) {
+            ConfigManager.toggleBoolean(Defines.hideSendAsButton);
+            if (view instanceof TextCheckCell) {
+                ((TextCheckCell) view).setChecked(ConfigManager.getBooleanOrFalse(Defines.hideSendAsButton));
+            }
         } else if (position == markdownParserRow) {
             ArrayList<String> arrayList = new ArrayList<>();
             arrayList.add("Nnngram");
@@ -467,6 +473,7 @@ public class ChatSettingActivity extends BaseActivity {
         hideTimeForStickerRow = addRow("hideTimeForSticker");
         showMessageIDRow = addRow("showMessageID");
         quickToggleAnonymous = addRow("quickToggleAnonymous");
+        hideSendAsButtonRow = addRow("hideSendAsButton");
         hideQuickSendMediaBottomRow = addRow("hideQuickSendMediaBottom");
         customQuickMessageRow = addRow("customQuickMessage");
         scrollableChatPreviewRow = addRow("scrollableChatPreview");
@@ -615,6 +622,9 @@ public class ChatSettingActivity extends BaseActivity {
                         textCell.setTextAndValueAndCheck(LocaleController.getString("disablePreviewVideoSoundShortcut", R.string.disablePreviewVideoSoundShortcut), LocaleController.getString("disablePreviewVideoSoundShortcutNotice", R.string.disablePreviewVideoSoundShortcutNotice), ConfigManager.getBooleanOrFalse(Defines.disablePreviewVideoSoundShortcut), true, true);
                     } else if (position == quickToggleAnonymous) {
                         textCell.setTextAndValueAndCheck(LocaleController.getString("quickToggleAnonymous", R.string.quickToggleAnonymous), LocaleController.getString("quickToggleAnonymousNotice", R.string.quickToggleAnonymousNotice), ConfigManager.getBooleanOrFalse(Defines.quickToggleAnonymous), true, true);
+                    } else if (position == hideSendAsButtonRow) {
+                        textCell.setTextAndCheck(LocaleController.getString("hideSendAsButton", R.string.hideSendAsButton),  ConfigManager.getBooleanOrFalse(Defines.hideSendAsButton),
+                            true);
                     } else if (position == disableStickersAutoReorderRow) {
                         textCell.setTextAndCheck(LocaleController.getString("disableStickersAutoReorder", R.string.disableStickersAutoReorder),
                             ConfigManager.getBooleanOrDefault(Defines.disableStickersAutoReorder, true), true);

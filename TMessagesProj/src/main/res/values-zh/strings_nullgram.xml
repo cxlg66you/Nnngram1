@@ -319,4 +319,5 @@
     <string name="deleteMessageForBoth">为双方删除消息</string>
     <string name="drawerList">侧边栏列表</string>
     <string name="TextStyleSettings">文本样式</string>
+    <string name="hideSendAsButton">隐藏发送者按钮</string>
 </resources>
