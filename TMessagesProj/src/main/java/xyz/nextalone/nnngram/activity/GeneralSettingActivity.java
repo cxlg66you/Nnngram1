@@ -275,6 +275,11 @@ public class GeneralSettingActivity extends BaseActivity {
             if (view instanceof TextCheckCell) {
                 ((TextCheckCell) view).setChecked(ConfigManager.getBooleanOrFalse(Defines.ignoreMutedCount));
             }
+        } else if (position == ignoreFolderUnreadCountRow) {
+            ConfigManager.toggleBoolean(Defines.ignoreFolderUnreadCount);
+            if (view instanceof TextCheckCell) {
+                ((TextCheckCell) view).setChecked(ConfigManager.getBooleanOrFalse(Defines.ignoreFolderUnreadCount));
+            }
         } else if (position == autoDisableBuiltInProxyRow) {
             ConfigManager.toggleBoolean(Defines.autoDisableBuiltInProxy);
             if (view instanceof TextCheckCell) {
