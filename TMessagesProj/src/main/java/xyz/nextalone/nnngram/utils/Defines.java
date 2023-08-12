@@ -126,6 +126,7 @@ public class Defines {
     public static final String showSavedMessages = "showSavedMessages";
     public static final String showChangeEmojiStatus = "showChangeEmojiStatus";
     public static final String showProfileMyStories = "showProfileMyStories";
+    public static final String showArchivedChats = "showArchivedChats";
 
     // Custom API
     public static final String customAPI = "customAPI";

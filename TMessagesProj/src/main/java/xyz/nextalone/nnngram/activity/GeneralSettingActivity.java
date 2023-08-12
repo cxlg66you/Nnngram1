@@ -836,7 +836,7 @@ public class GeneralSettingActivity extends BaseActivity {
 //        public static final String showSavedMessages = "showSavedMessages";
 
         boolean isPremium = UserConfig.getInstance(UserConfig.selectedAccount).isPremium();
-        int count = isPremium ? 7 : 5;
+        int count = isPremium ? 8 : 6;
         for (int a = 0; a < count; a++) {
             TextCheckCell textCell = new TextCheckCell(context);
             switch (a) {
@@ -845,8 +845,9 @@ public class GeneralSettingActivity extends BaseActivity {
                 case 2 -> textCell.setTextAndCheck(LocaleController.getString("Calls", R.string.Calls), ConfigManager.getBooleanOrDefault(Defines.showCalls, true), false);
                 case 3 -> textCell.setTextAndCheck(LocaleController.getString("PeopleNearby", R.string.PeopleNearby), ConfigManager.getBooleanOrDefault(Defines.showPeopleNearby, true), false);
                 case 4 -> textCell.setTextAndCheck(LocaleController.getString("SavedMessages", R.string.SavedMessages), ConfigManager.getBooleanOrDefault(Defines.showSavedMessages, true), false);
-                case 5 -> textCell.setTextAndCheck(LocaleController.getString("ChangeEmojiStatus", R.string.ChangeEmojiStatus), ConfigManager.getBooleanOrDefault(Defines.showChangeEmojiStatus, true), false);
-                case 6 -> textCell.setTextAndCheck(LocaleController.getString("ProfileMyStories", R.string.ProfileMyStories), ConfigManager.getBooleanOrDefault(Defines.showProfileMyStories, true), false);
+                case 5 -> textCell.setTextAndCheck(LocaleController.getString("ArchivedChats", R.string.ArchivedChats), ConfigManager.getBooleanOrDefault(Defines.showArchivedChats, true), false);
+                case 6 -> textCell.setTextAndCheck(LocaleController.getString("ChangeEmojiStatus", R.string.ChangeEmojiStatus), ConfigManager.getBooleanOrDefault(Defines.showChangeEmojiStatus, true), false);
+                case 7 -> textCell.setTextAndCheck(LocaleController.getString("ProfileMyStories", R.string.ProfileMyStories), ConfigManager.getBooleanOrDefault(Defines.showProfileMyStories, true), false);
             }
             textCell.setTag(a);
             textCell.setBackground(Theme.getSelectorDrawable(false));
@@ -875,10 +876,14 @@ public class GeneralSettingActivity extends BaseActivity {
                         textCell.setChecked(ConfigManager.getBooleanOrDefault(Defines.showSavedMessages, true));
                     }
                     case 5 -> {
+                        ConfigManager.toggleBoolean(Defines.showArchivedChats);
+                        textCell.setChecked(ConfigManager.getBooleanOrDefault(Defines.showArchivedChats, false));
+                    }
+                    case 6 -> {
                         ConfigManager.toggleBoolean(Defines.showChangeEmojiStatus);
                         textCell.setChecked(ConfigManager.getBooleanOrDefault(Defines.showChangeEmojiStatus, true));
                     }
-                    case 6 -> {
+                    case 7 -> {
                         ConfigManager.toggleBoolean(Defines.showProfileMyStories);
                         textCell.setChecked(ConfigManager.getBooleanOrDefault(Defines.showProfileMyStories, true));
                     }
