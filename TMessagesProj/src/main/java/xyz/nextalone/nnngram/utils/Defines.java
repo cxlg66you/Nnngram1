@@ -116,6 +116,7 @@ public class Defines {
     public static final String customTitle = "customTitle";
     public static final String deleteMessageForBoth = "deleteMessageForBoth";
     public static final String textStyleSettings = "textStyleSettings";
+    public static final String hideStories = "hideStories";
 
     // Drawer List
     public static final String showNewGroup = "showNewGroup";

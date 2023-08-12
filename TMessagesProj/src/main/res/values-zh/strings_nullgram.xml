@@ -320,4 +320,5 @@
     <string name="drawerList">侧边栏列表</string>
     <string name="TextStyleSettings">文本样式</string>
     <string name="hideSendAsButton">隐藏发送者按钮</string>
+    <string name="hideStories">隐藏动态</string>
 </resources>

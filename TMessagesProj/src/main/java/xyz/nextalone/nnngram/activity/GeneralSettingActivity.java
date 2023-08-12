@@ -95,7 +95,8 @@ public class GeneralSettingActivity extends BaseActivity {
     private int doNotTranslateRow;
     private int autoTranslateRow;
     private int translator2Row;
-
+    
+    private int hideStoriesRow;
     private int customTitleRow;
     private int showBotAPIRow;
     private int showExactNumberRow;
@@ -132,7 +133,12 @@ public class GeneralSettingActivity extends BaseActivity {
 
     @Override
     protected void onItemClick(View view, int position, float x, float y) {
-        if (position == customTitleRow) {
+        if (position == hideStoriesRow) {
+            ConfigManager.toggleBoolean(Defines.hideStories);
+            if (view instanceof TextCheckCell) {
+                ((TextCheckCell) view).setChecked(ConfigManager.getBooleanOrFalse(Defines.hideStories));
+            }
+        } else if (position == customTitleRow) {
             setCustomTitle(view, position);
             listAdapter.notifyItemChanged(position, PARTIAL);
         }
@@ -427,6 +433,7 @@ public class GeneralSettingActivity extends BaseActivity {
 
 
         generalRow = addRow();
+        hideStoriesRow = addRow("hideStories");
         customTitleRow = addRow("customTitle");
         showBotAPIRow = addRow("showBotAPI");
         showExactNumberRow = addRow("showExactNumber");
@@ -643,6 +650,8 @@ public class GeneralSettingActivity extends BaseActivity {
                         textCell.setTextAndCheck(LocaleController.getString("TranslatorShowOriginal", R.string.TranslatorShowOriginal), TranslateHelper.getShowOriginal(), true);
                     } else if (position == ignoreFolderUnreadCountRow) {
                         textCell.setTextAndCheck(LocaleController.getString("ignoreFolderUnreadCount", R.string.ignoreFolderUnreadCount), ConfigManager.getBooleanOrFalse(Defines.ignoreFolderUnreadCount), true);
+                    } else if (position == hideStoriesRow) {
+                        textCell.setTextAndCheck(LocaleController.getString("hideStories", R.string.hideStories), ConfigManager.getBooleanOrFalse(Defines.hideStories), true);
                     }
                     break;
                 }

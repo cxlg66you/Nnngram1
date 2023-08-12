@@ -71,6 +71,9 @@ import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+import xyz.nextalone.nnngram.config.ConfigManager;
+import xyz.nextalone.nnngram.utils.Defines;
+
 public class StoriesController {
 
     public final static int STATE_READ = 0;
@@ -222,11 +225,17 @@ public class StoriesController {
     }
 
     public boolean hasStories(long dialogId) {
+        if (ConfigManager.getBooleanOrFalse(Defines.hideStories)) {
+            return false;
+        }
         TLRPC.TL_userStories stories = allStoriesMap.get(dialogId);
         return stories != null && !stories.stories.isEmpty();
     }
 
     public boolean hasStories() {
+        if (ConfigManager.getBooleanOrFalse(Defines.hideStories)) {
+            return false;
+        }
         return (dialogListStories != null && dialogListStories.size() > 0) || hasSelfStories();
     }
 
