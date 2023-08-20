@@ -19,7 +19,7 @@
 package xyz.nextalone.nnngram.config
 
 import android.annotation.SuppressLint
-import android.app.Activit
+import android.app.Activity
 import com.google.gson.JsonObject
 import com.google.gson.JsonPrimitive
 import org.json.JSONException
