@@ -38,7 +38,7 @@ public class BuildVars {
 
 
     // You can use this flag to disable Google Play Billing (If you're making fork and want it to be in Google Play)
-    public static boolean IS_BILLING_UNAVAILABLE = false;
+    public static boolean IS_BILLING_UNAVAILABLE = true;
 
     static {
         if (ApplicationLoader.applicationContext != null) {
